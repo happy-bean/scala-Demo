@@ -1,6 +1,7 @@
 package com.wgt.lesson2
 
 import scala.util.Random
+import scala.util.control.Breaks
 
 /**
   * Author:wgt
@@ -41,28 +42,28 @@ class Study2 {
 
   /*循环*/
   while (true) {
-    println(" while ");
+    println(" while ")
   }
 
   do {
-    println(" do/while ");
-  } while (true);
+    println(" do/while ")
+  } while (true)
 
-  var a = 0;
+  var a = 0
   for (a <- 1 to 10) {
-    println(" for ");
+    println(" for ")
   }
 
-  val numList = List(1,2,3,4,5,6);
+  val numList = List(1,2,3,4,5,6)
   // foreach
   for( a <- numList ){
-    println( " foreach : " + a );
+    println( " foreach : " + a )
   }
 
   //for 循环过滤
   for( a <- numList
        if a != 3; if a < 8 ){
-    println( "or 循环过滤: " + a );
+    println( "or 循环过滤: " + a )
   }
 
   // for 循环中使用 yield，Scala中的yield的主要作用是记住每次迭代中的有关值，并逐一存入到一个数组中
@@ -72,9 +73,17 @@ class Study2 {
 
   // 输出返回值
   for( a <- retVal){
-    println( "Value of a: " + a );
+    println( "Value of a: " + a )
   }
 
-
-
+  //scala中没有break 和　continue，可使用breakable代替
+  val loop = new Breaks
+  loop.breakable {
+    for( a <- numList){
+      println( "Value of a: " + a )
+      if( a == 4 ){
+        loop.break
+      }
+    }
+  }
 }
