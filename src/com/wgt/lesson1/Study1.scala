@@ -4,43 +4,45 @@ package com.wgt.lesson1
   * Author:wgt
   * Description: Scala 基础语法
   */
-class Study1 {
-/*
+object Study1 {
+  def main(args: Array[String]): Unit = {
+    /*
 * 区分大小写
 * 类名首字母大写
 * */
 
 
-/*Scala 注释
+    /*Scala 注释
 
   Scala 类似 Java 支持单行和多行注释。多行注释可以嵌套，但必须正确嵌套，一个注释开始符号对应一个结束符号。注释在 Scala 编译中会被忽略，实例如下
   */
 
-   // 这是一个单行注释
+    // 这是一个单行注释
 
-  /* 这是一个 Scala 程序
+    /* 这是一个 Scala 程序
  * 这是一行注释
  * 这里演示了多行注释
  */
 
 
-  /*以下摘自菜鸟教程*/
+    /*以下摘自菜鸟教程*/
 
 
-/*
+    /*
   空行和空格
 
   一行中只有空格或者带有注释，Scala 会认为其是空行，会忽略它。标记可以被空格或者注释来分割。
 */
 
-/*
+    /*
   Scala是面向行的语言，语句可以用分号（;）结束或换行符。Scala 程序里,语句末尾的分号通常是可选的。如果你愿意可以输入一个,但若一行里仅 有一个语句也可不写。另一方面,如果一行里写多个语句那么分号是需要的。例如
 */
 
-  val s = "hello word"; println(s)
+    val s = "hello word";
+    println(s)
 
 
-/*  标识符
+    /*  标识符
 
   Scala 可以使用两种形式的标志符，字符数字和符号。
 
@@ -59,10 +61,9 @@ class Study1 {
    */
 
 
+    /*基本语法*/
 
-  /*基本语法*/
-
-/*
+    /*
   Scala 基本语法需要注意以下几点：
 
   区分大小写 -  Scala是大小写敏感的，这意味着标识Hello 和 hello在Scala中会有不同的含义。
@@ -88,4 +89,5 @@ class Study1 {
     def main(args: Array[String]) - Scala程序从main()方法开始处理，这是每一个Scala程序的强制程序入口部分。
 */
 
-    }
+  }
+}
