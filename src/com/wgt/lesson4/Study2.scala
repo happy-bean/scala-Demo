@@ -2,7 +2,7 @@ package com.wgt.lesson4
 
 /**
   * Author:wgt
-  * Description:
+  * Description: setter getter
   */
 class Study2 {
   var age=0
