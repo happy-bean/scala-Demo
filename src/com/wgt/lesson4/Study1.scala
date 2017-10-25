@@ -1,8 +1,9 @@
 package com.wgt.lesson4
 
+
 /**
   * Author:wgt
-  * Description: 类
+  * Description: 类和对象
   */
 
 //Scala中的类不声明为public，一个Scala源文件中可以有多个类

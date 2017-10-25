@@ -3,8 +3,6 @@ package com.wgt.lesson4
 import java.io.FileReader
 import java.util.Properties
 
-import scala.reflect.io.File
-
 /**
   * Author:wgt
   * Description:辅助构造器
