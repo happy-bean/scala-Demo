@@ -2,7 +2,7 @@ package com.wgt.lesson4
 
 /**
   * Author:wgt
-  * Description:特征
+  * Description:特征/抽象类
   */
 class Study8 {
 
@@ -27,13 +27,38 @@ class Study8 {
 
 trait Equal {
   def isEqual(x: Any): Boolean
+
   def isNotEqual(x: Any): Boolean = !isEqual(x)
 }
 
 class Point(xc: Int, yc: Int) extends Equal {
   var x: Int = xc
   var y: Int = yc
+
   def isEqual(obj: Any) =
     obj.isInstanceOf[Point] &&
       obj.asInstanceOf[Point].x == x
+}
+
+//和java一样　abstract用来标记不能被实例化的类
+abstract class AbstractClass {
+  var name: String //抽象字段
+  def id: Int //抽象方法
+
+}
+
+//实现类
+class Test extends AbstractClass {
+  override var name = "scala"
+
+  override def id: Int = {
+    100
+  }
+
+  //匿名子类
+  var Test1 = new AbstractClass {
+    override def id: Int =1
+
+    override var name: String = "scala"
+  }
 }
